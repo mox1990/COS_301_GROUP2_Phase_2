@@ -9,6 +9,7 @@
 \usepackage{listings} % Required for insertion of code
 \usepackage{courier} % Required for the courier font
 \usepackage{hyperref} %hyperlink
+\usepackage{float}
 
 % Margins
 \topmargin=-0.45in
@@ -39,19 +40,28 @@
 	     Melany Barnes					(12030466) \\[1em]
 	     Zenadia Groenewald				(12265676) \\[1em]
 	     Zane Bloom						(12236722) \\[1em]
-	     {\bf Version 0.0}
+	     {\bf Version 0.1}
 	    
 	\end{center}
 	
 	\newpage
 		{\LARGE \bf Change Log}\\[2em]
 		
-		\begin{tabbing}
-			\hspace*{2.5cm}\=\hspace*{2.5cm}\=\hspace*{8cm}\=\hspace*{3cm} \kill
-			11/03/2014	\> Version 1.0	\> Document Created 							\> Mathys Ellis \\
-			
-		\end{tabbing}
-
+		\begin{center}
+		\begin{tabular}{|l|p{1.4cm}|p{8cm}|p{2.8cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\bf Change log} \\
+		\hline
+		\bf Date & \bf Version & \bf Description & \bf Person \\
+		\hline
+		11/03/2014 & v 0.0 & Document created & Mathys Ellis \\
+		\hline
+		11/03/2014 & v 0.1 & Added android application: UI design, Process Specifications and user work flow & Mathys Ellis \\
+		\hline
+		%\end{tabbing}
+		\end{tabular}
+		\end{center}
+		
 	\newpage
 	\tableofcontents
 	
@@ -80,26 +90,23 @@
 		
 		\input{./subdocs/Backend_design.tex}
 		
-	\subsection{Front-end system}
+		
+	\subsection{Web interface}
 
-		\vspace{0.2in}
-		
-			\subsubsection{Web interface}
-		
-			\vspace{0.2in}
-			\input{./subdocs/Web_interface.tex}
+	\vspace{0.2in}
+	\input{./subdocs/Web_interface.tex}
+	
+	\subsection{Android application}
 			
-			\subsubsection{Android application}
-					
-			\vspace{0.2in}
-			\input{./subdocs/Android_app.tex}
-			
-			
-			
-		\vspace{0.2in}
+	\vspace{0.2in}
+	\input{./subdocs/Android_app.tex}
+	
+	
+	
+	\vspace{0.2in}
 
 	
-		
+	\newpage	
 	\section{Glossary}
 	
 		\vspace{0.2in}
