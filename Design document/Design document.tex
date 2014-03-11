@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pdfpages}
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{hyperref} %hyperlink
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+\newcommand{\Title}{Design document} % Assignment title
+\newcommand{\Class}{Cos\ 301} % Course/class
+
+\begin{document}
+
+	\vspace{4em}
+	
+	\begin{center}%
+	\LARGE \bf \Class: Mini Project phase 2 \\
+	  \LARGE \bf \Title \\[4em]
+	  \LARGE {\bf Group 8}\\[1em]
+	  \LARGE {\bf Group Members:}\\[2em]
+	  \large
+	  	 Gerhard Smit					(12282945) \\[1em]
+	     Alfred Ngako					(12236731) \\[1em]
+	     Mathys Ellis					(12019837) \\[1em]
+	     Melany Barnes					(12030466) \\[1em]
+	     Zenadia Groenewald				(12265676) \\[1em]
+	     Zane Bloom						(12236722) \\[1em]
+	     {\bf Version 0.0}
+	    
+	\end{center}
+	
+	\newpage
+		{\LARGE \bf Change Log}\\[2em]
+		
+		\begin{tabbing}
+			\hspace*{2.5cm}\=\hspace*{2.5cm}\=\hspace*{8cm}\=\hspace*{3cm} \kill
+			11/03/2014	\> Version 1.0	\> Document Created 							\> Mathys Ellis \\
+			
+		\end{tabbing}
+
+	\newpage
+	\tableofcontents
+	
+	\vspace{0.5in}
+	
+	\begin{flushleft}
+		\LARGE\href{https://github.com/mox1990/COS_301_GROUP8_Phase_2}{GitHub repository: Mini project - Phase 2 -  Group 8}
+	\end{flushleft}
+	
+	\newpage
+	\section{Software architecture design}
+	
+		\vspace{0.2in}
+		\input{./subdocs/Software_architecture_design.tex}
+		
+		
+	\section{Application design}
+	
+		\vspace{0.2in}
+		
+		
+		
+	\subsection{Back-end system}
+
+		\vspace{0.2in}
+		
+		\input{./subdocs/Backend_design.tex}
+		
+	\subsection{Front-end system}
+
+		\vspace{0.2in}
+		
+			\subsubsection{Web interface}
+		
+			\vspace{0.2in}
+			\input{./subdocs/Web_interface.tex}
+			
+			\subsubsection{Android application}
+					
+			\vspace{0.2in}
+			\input{./subdocs/Android_app.tex}
+			
+			
+			
+		\vspace{0.2in}
+
+	
+		
+	\section{Glossary}
+	
+		\vspace{0.2in}
+		\begin{itemize}
+			\item Student - Entailing all students register at the university for specific modules.
+			\item Marker - A grouping of including Teaching Assistance and Tutors, which have permission to assign marks.
+			\item Lecturer - Co-ordinator and/or module presenter.
+			
+			\item Markable item - Including tests, class tests, assignments, practicals.
+			\item Mark list - List consisting of all students registered for a specific module.
+			\item Course - A module presented at the university.
+			
+			\item Web interface - Browser client.
+			\item SSO - Single Sign On.
+			\item LDAP - System used during SSO for authentication.
+			\item SOAP - Simple Object Access Protocol.
+			\item API -	A sub-section of the overall system.
+			\item HTTPS - Secured HTTP connection.
+			\item HTML 5 - Standardised version of HTML.
+			\item PDF -	The format used in statistics exports.
+			\item CSV -	Column Separated Values, used for import of marks and student information.
+			\item SOAP - Simple Object Access Protocol	
+			\item WSDL - Web Service Definition Language
+			\item Android - Mobile operating system used.
+			\item Django - Web framework used for the systems back-end.
+			\item Python - Programming language used in Django.
+			\item Java - Used by Android to program application.
+			\item MySQL - Language for database structure and queries.
+		\end{itemize}	
+	
+\end{document}
