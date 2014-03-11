@@ -1,0 +1,27 @@
+
+Protocols
+
+    http://en.wikipedia.org/wiki/List_of_web_service_protocols
+    
+    [SOAP VS REST]
+    http://searchsoa.techtarget.com/tip/REST-vs-SOAP-How-to-choose-the-best-Web-service
+    
+    [JSON vs XML]
+    http://stackoverflow.com/questions/2636245/choosing-between-json-and-xml
+
+Libraries
+
+    [JSON/XML Marshalling/de-Marshalling]
+    https://docs.djangoproject.com/en/1.6/topics/serialization/
+    
+    [LDAP Authentication]
+    https://docs.djangoproject.com/en/1.5/topics/auth/customizing/
+    
+    [CSV generating]
+    https://docs.djangoproject.com/en/dev/howto/outputting-csv/
+    
+    [CSV importing]
+    https://pypi.python.org/pypi/django-csv-importer/0.1.1
+    
+    [PDF generating]
+    https://docs.djangoproject.com/en/dev/howto/outputting-pdf/
