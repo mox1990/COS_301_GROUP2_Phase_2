@@ -8,3 +8,32 @@
 
 \linespread{1.1} % Line spacing
 
+\subsection{Protocols}
+
+\subsubsection{HTTP - HyperText Transfer Protocol}
+
+The system will make use of HTTP to receive requests and send responses through the different access channels. This protocol will define the communication
+between the sytem and web browsers as well the Android application.
+
+\subsubsection{HTTPS - HyperText Transfer Protocol Secure}
+
+The system will make use of HTTPS when communicating sensitive data through the different access channels.
+
+\subsubsection{LDAP - Lightweight Directory Access Protocol}
+
+The system will make use of the LDAP system used by the Department of Computer Science. This system contains the details of the users of the system.
+Thus the users will be authenticated through this LDAP system. LDAP is both efficient and low cost. Making use of the LDAP protocol is an architectural constraint. 
+
+\subsubsection{JSON - JavaScript Object Notation}
+
+The system will make use of the JSON protocol to marshal response objects that are requested by other systems. JSON is the preferred
+marshaling protocol due to it being efficient and lightweight. When compared to XML, the JSON marshaled objects are smaller in size
+and the time taken to process them is less. These performace gains have made JSON the chosen marshaling protocol.
+
+\subsubsection{REST - Representational State Transfer}
+
+Strictly speaking REST is not a protocol, but it makes use of HTTP to provide web services. REST is preferred over SOAP as it is lightweight, easy to use and will provide
+better performance in the case of this system. These advantages have made REST the chosen web services protocol. Making use of RESTful web services is an architectural
+constraint.
+
+\subsection{Libraries}
