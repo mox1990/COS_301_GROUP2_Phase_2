@@ -25,3 +25,6 @@ Libraries
     
     [PDF generating]
     https://docs.djangoproject.com/en/dev/howto/outputting-pdf/
+    
+    [HTTP?]
+    https://docs.djangoproject.com/en/dev/ref/request-response/#django.http.HttpResponse

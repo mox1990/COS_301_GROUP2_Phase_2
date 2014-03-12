@@ -19,10 +19,10 @@ between the sytem and web browsers as well the Android application.
 
 The system will make use of HTTPS when communicating sensitive data through the different access channels.
 
-\subsubsection{LDAP - Lightweight Directory Access Protocol}
+\subsubsection{REST - Representational State Transfer}
 
-The system will make use of the LDAP system used by the Department of Computer Science. This system contains the details of the users of the system.
-Thus the users will be authenticated through this LDAP system. LDAP is both efficient and low cost. Making use of the LDAP protocol is an architectural constraint. 
+Strictly speaking REST is not a protocol, but it makes use of HTTP to provide web services. REST is preferred over SOAP as it is lightweight, easy to use and will provide
+better performance in the case of this system. These advantages have made REST the chosen web services protocol. Making use of RESTful web services is an architectural constraint.
 
 \subsubsection{JSON - JavaScript Object Notation}
 
@@ -30,10 +30,31 @@ The system will make use of the JSON protocol to marshal response objects that a
 marshaling protocol due to it being efficient and lightweight. When compared to XML, the JSON marshaled objects are smaller in size
 and the time taken to process them is less. These performace gains have made JSON the chosen marshaling protocol.
 
-\subsubsection{REST - Representational State Transfer}
+\subsubsection{LDAP - Lightweight Directory Access Protocol}
 
-Strictly speaking REST is not a protocol, but it makes use of HTTP to provide web services. REST is preferred over SOAP as it is lightweight, easy to use and will provide
-better performance in the case of this system. These advantages have made REST the chosen web services protocol. Making use of RESTful web services is an architectural
-constraint.
+The system will make use of the LDAP system used by the Department of Computer Science. This system contains the details of the users of the system.
+Thus the users will be authenticated through this LDAP system. LDAP is both efficient and low cost. Making use of the LDAP protocol is an architectural constraint. 
 
 \subsection{Libraries}
+
+\subsubsection{JSON Marshaling}
+
+The system will make use of the serialization library provided by Django. The term "serialize" is considered to be synonymous with "marshal" in the Python standard library. Therefore this library is suited for marshaling. This library supports many different formats but specifically supports JSON. This functionality is needed to by the web services.
+
+\subsubsection{LDAP Authentication Integration}
+
+The Django framework provides its own authentication system. To integrate LDAP with the Django framework, 
+a new authentication backend must be written and added to the Django framework. This backend must realize the
+contract setup by the Django framework. This functionality is needed to authenticate users.
+
+\subsubsection{Importing CSV}
+
+The system will be making use of the django-csv-importer v0.1.3.5 library. This library provides the functionality to transform the data of a CSV file into Django model instance. This functionality is needed to import assessment entries from CSV files.
+
+\subsubsection{Exporting CSV}
+
+The system will be making use of the Python CSV library. This library provides the functionality to data to a CSV file. This functionality is needed to export mark sheets to CSV files.
+
+\subsubsection{Generating PDF's}
+
+The system will be making use of the ReportLab library. This library provides the functionality to dynamically generate reports in the PDF format. This functionality is needed to generate reports requested by the lecturer.
