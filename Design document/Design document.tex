@@ -40,7 +40,7 @@
 	     Zenadia Groenewald				(12265676) \\[1em]
 	     Alfred Ngako					(12236731) \\[1em]
 	  	 Gerhard Smit					(12282945) \\[1em]
-	     {\bf Version 0.8}
+	     {\bf Version 1.0}
 	    
 	\end{center}
 	
@@ -68,26 +68,32 @@
 		\hline
 		13/03/2014 & v 0.6 & Added Technologies to be used & Gerhard Smit \\
 		\hline
-		13/03/2014 & v 0.7 & Database tables included & Melany Barnes \\
+		13/03/2014 & v 0.7 & Added Back-end: Database tables, user work-flow & Melany Barnes \\
 		\hline
 		13/03/2014 & v 0.8 & Added Frameworks to be used & Gerhard Smit \\
 		\hline
-		13/03/2014 & v 0.8 & Added Web User Interface & Alfred Ngako \\
+		13/03/2014 & v 0.8 & Added Web User Interface sections & Alfred Ngako \\
+		\hline
+		13/03/2014 & v 0.9 & Added Back-end: API, levels of granularity, System class diagrams & Zenadia Groenewald \\
+		\hline
+		13/03/2014 & v 1.0 & Finalised document & Mathys Ellis \\
 		\hline
 		
 		
 		%\end{tabbing}
 		\end{tabular}
 		\end{center}
-		
+	\begin{flushleft}
+		\LARGE\href{https://github.com/mox1990/COS_301_GROUP8_Phase_2}{GitHub repository: Mini project - Phase 2 -  Group 8}
+	\end{flushleft}	
 	\newpage
 	\tableofcontents
 	
+	\listoffigures	
+	
 	\vspace{0.5in}
 	
-	\begin{flushleft}
-		\LARGE\href{https://github.com/mox1990/COS_301_GROUP8_Phase_2}{GitHub repository: Mini project - Phase 2 -  Group 8}
-	\end{flushleft}
+	
 	
 	\newpage
 	\section{Software architecture design}
@@ -95,11 +101,10 @@
 		\vspace{0.2in}
 		\input{./subdocs/Software_architecture_design.tex}
 		
-		
+	\newpage	
 	\section{Application design}
 	
-		\vspace{0.2in}
-		
+		\vspace{0.2in}		
 		
 		
 	\subsection{Back-end system}
@@ -108,7 +113,7 @@
 		
 		\input{./subdocs/Backend_design.tex}
 		
-		
+	\newpage	
 	\subsection{Web interface}
 
 	\vspace{0.2in}
@@ -141,8 +146,7 @@
 			\item Web interface - Browser client.
 			\item SSO - Single Sign On.
 			\item LDAP - System used during SSO for authentication.
-			\item SOAP - Simple Object Access Protocol.
-			\item API -	A sub-section of the overall system.
+			\item API -	Application Programming Interface.
 			\item HTTPS - Secured HTTP connection.
 			\item HTML 5 - Standardised version of HTML.
 			\item PDF -	The format used in statistics exports.
