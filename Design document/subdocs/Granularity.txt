@@ -1,0 +1,26 @@
+Lower Levels of Granularity:
+The levels of granularity are specific according to the various aspects of the program,
+meaning the different aspects are ordered by a hierarchy in the system.
+This order, from the lowest level to the highest, is as follows:
+
+	-Per assessment: there are many different assessments of each type that follow a single course,
+	 and there are several students who partake in each assessment.
+	-Per assessment type: while there are less assessment types such as tests, practicals, tutorials, 
+	 exams, etc., it still follows that this aspect is highly granular.
+	-Per semester/exam mark: this encompasses the individual marks of students and the results they
+	 achieved throughout the semester in relation to their exam mark.
+	-Per overall mark: this determines the student's academic standing in the course; it consists of their
+	 various assessment marks as well as their results for examinations.
+	-Per course: this encompasses all students administered for that course as well as their assessment 
+	 marks and average for that specific course.
+
+These levels need to be considered in the subdivision of the system and accomodated in the program.
+
+The application can be further subdivided by its architechtural components:
+
+	-The interface: to provide an interface via an API to the system.
+	-API: to facilitate the interactions between the user and the system.
+	-Client-Server communication: also provided by the API.
+	-Back-end: receives information such as user details, performs databse 
+	 operations, validates information, collects data relevant to queries 
+ 	and commands given by the user through the API.
