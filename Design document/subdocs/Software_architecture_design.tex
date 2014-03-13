@@ -25,6 +25,15 @@ The application server chosen will be the Apache server, as it is part of the ar
 The system will be tested using the Django unittest module which comes with the Django package it is part of the architecture constraints. The unittest module allows the sharing and integration of code between seperate tests such as the start up and shutdown of testing. It allows Command-Line interface as well as code imbedded testing. Unittest has functionality to re-use old test code instead of designing the test code over. 
 
 \subsection{Frameworks}
+
+\subsubsection{Object-Relational Mapper}
+
+The Django object-relational mapper allows us to integrate between the objects created with the users data, such as marks, names, surnames and so forth, to simple SQL statements to be stored in the MySQL database that will be used. Django allows multiple inheritance allwoing easier implementation and structure of objects. The object-relational mapper from Django is an architecture constraint.  
+
+\subsubsection{Web services frameworks}
+
+The system will make use of Django-REST-framework as it allows easy and fast solutions to making REST APIs, it has serialization that is usable by both ORM and non-ORM data sources, which is useful for us as we require ORM sources to be used and integrated in the system. It has OAuth 1.0 and OAuth 2.0 integrated making the system easier to be accessed via client side to the server side through any platform.
+
 \subsection{Protocols}
 
 \subsubsection{HTTP - HyperText Transfer Protocol}
