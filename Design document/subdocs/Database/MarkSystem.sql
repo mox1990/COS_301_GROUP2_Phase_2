@@ -11,25 +11,25 @@ Go
 
 CREATE TABLE Module_information
 (
-	module_Id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	module_name VARCHAR(100) NOT NULL
 )
 GO
 
 CREATE TABLE Person
 (
-	userId INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	first_names VARCHAR(255),
-	surname VARCHAR(255) NOT NULL
+	id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	first_names VARCHAR(100),
+	surname VARCHAR(100) NOT NULL
 )
 GO
 
 CREATE TABLE Auditlog
 (
 	date_time_stamp datetime NOT NULL,
-	userId INT REFERENCES Person(userId),
+	userId INT REFERENCES Person(id),
 	"action" VARCHAR(100) NOT NULL,
-	"description" VARCHAR(255),
+	comment VARCHAR(100),
 	old_value VARCHAR(100) NOT NULL,
 	new_value VARCHAR(100) NOT NULL
 )
@@ -37,39 +37,54 @@ GO
 
 CREATE TABLE Assessment
 (
-	assessmentId INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	assessment_name VARCHAR(100) NOT NULL,
-	module_Id INT REFERENCES Module_information(module_Id),
-	"owner" INT REFERENCES Person(userId),
+	id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	name VARCHAR(100) NOT NULL,
+	module_Id INT REFERENCES Module_information(id),
+	"owner" INT REFERENCES Person(id),
 	full_mark INT NOT NULL,
+	"weight" INT NOT NULL,
 	"description" VARCHAR(255),
-	"open" datetime NOT NULL,
-	"close" datetime NOT NULL,
 	published bit 
 )
 GO
 
-CREATE TABLE Module_right
+CREATE TABLE Leaf_assessment
 (
-	moduleId INT REFERENCES Module_information(module_Id),
-	userId INT REFERENCES Person(userId),
-	"type" VARCHAR(2) NOT NULL
+	id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	asessmentId INT REFERENCES Assessment(id),
+	name VARCHAR(100) NOT NULL,
+	full_mark INT NOT NULL,
+	"description" VARCHAR(255),
+	published bit
 )
 GO
 
-CREATE TABLE "Login"
+CREATE TABLE Assessment_session
 (
-	userId INT REFERENCES Person(userId),
-	"password" VARCHAR(30) NOT NULL
+	id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	leafAssessmentId INT REFERENCES Leaf_assessment(id),
+	name VARCHAR(255),
+	"open" datetime NOT NULL,
+	"close" datetime NOT NULL,
 )
 GO
 
-CREATE TABLE Mark
+CREATE TABLE AssessmentSessionMarker
 (
-	moduleId INT REFERENCES Module_information(module_Id),
-	userId INT REFERENCES Person(userId),
+	id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	userId INT REFERENCES Person(id),
+	assessmentSessionId INT REFERENCES Assessment_session(id),
+)
+GO
+
+CREATE TABLE Mark_allocation
+(
+	id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	userId INT REFERENCES Person(id),
+	markerId INT REFERENCES Person(id),
+	assessmentSessionId INT REFERENCES Assessment_session(id),
 	mark INT NOT NULL,
-	comment VARCHAR(255) NOT NULL,
-	date_time_mark_entered datetime NOT NULL
+	comment VARCHAR(255),
+	time_Stamp datetime NOT NULL
 )
 GO
